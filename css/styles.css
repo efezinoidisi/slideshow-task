@@ -3,16 +3,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 main {
-    width: 80vw;
+    width: 50vw;
     height: 500px;
-    border-radius: 3px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 main:hover .direction {
@@ -27,20 +26,12 @@ main .direction {
     left: 0;
     justify-content: space-between;
     width: 100%;
-    z-index: 99999;
+    z-index: 2;
     transition: all ease 0.5s;
 }
 
 main .direction .fa-solid {
-    margin: 0 5px;
     font-size: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
     opacity: 0.5;
     transition: ease 0.3s;
     cursor: pointer;
@@ -65,4 +56,15 @@ main .slider .slide {
     min-width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+
+@media screen and (max-width:700px) {
+    body {
+        height: max-content;
+    }
+
+    main {
+        width: 90vw;
+    }
 }
